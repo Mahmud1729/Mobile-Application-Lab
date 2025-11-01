@@ -7,7 +7,7 @@ void main() {
     'Afganstan': "Kabul"
   };
 
-  // Adding new item
-  countryCapital['Japan'] = "Tokyo";
+  // Removing an item
+  countryCapital.remove('USA');
   print(countryCapital);
 }
