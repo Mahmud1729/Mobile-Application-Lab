@@ -1,15 +1,13 @@
-// Difference and intersections in Set
+// Applying map methods
 
 void main() {
-  // declaring fruits as set
-  Set<String> fruits1 = {"Orange", "Mango", "Apple"};
-  Set<String> fruits2 = {"Apple", "Grapes", "Bannana"};
+  Map<String, String> countryCapital = {
+    'USA': "Washington, DC",
+    'Bangladesh': "Dhaka",
+    'Afganstan': "Kabul"
+  };
 
-  // difference method
-  final differnceSet = fruits1.difference(fruits2);
-  print(differnceSet); //{Orange, Mango}
-
-  // intersection method
-  final intersectionSet = fruits1.intersection(fruits2);
-  print(intersectionSet); //{Apple}
+  // Adding new item
+  countryCapital['Japan'] = "Tokyo";
+  print(countryCapital);
 }
