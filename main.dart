@@ -1,13 +1,14 @@
 // Applying map methods
 
 void main() {
-  Map<String, String> countryCapital = {
-    'USA': "Washington, DC",
-    'Bangladesh': "Dhaka",
-    'Afganstan': "Kabul"
+  Map<String, dynamic> books = {
+    'Title': "Opekkha",
+    'Author': "Humayun Ahmed",
+    'Pages': 220
   };
 
-  // Updating item
-  countryCapital['China'] = "Beijing";
-  print(countryCapital);
+  // Loop through map
+  for (MapEntry book in books.entries) {
+    print("Key is ${book.key} Value is ${book.value}");
+  }
 }
