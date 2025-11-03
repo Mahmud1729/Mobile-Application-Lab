@@ -1,14 +1,22 @@
-// Applying map methods
+// Creating class in Dart
+
+class Animal {
+  String? name;
+  int? numOfLegs;
+  int? lifeSpan;
+
+  void display() {
+    print("Animal name: $name");
+    print("Number of legs: $numOfLegs");
+    print("Life span: $lifeSpan");
+  }
+}
 
 void main() {
-  Map<String, double> mathMarks = {
-    'Mark': 35,
-    'Harry': 42,
-    'Smith': 65,
-    'Warner': 32
-  };
+  Animal animal = Animal();
+  animal.name = "Dogy";
+  animal.numOfLegs = 4;
+  animal.lifeSpan = 20;
 
-  // Where filter
-  mathMarks.removeWhere((Key, value) => value < 37);
-  print(mathMarks);
+  animal.display();
 }
