@@ -1,25 +1,19 @@
 // Usign Constructor in Dart
 
-class Camera {
+class Stuednt {
   String? name;
-  String? color;
-  double? megapixel;
+  int? age;
 
-  // Constructor
-  Camera(this.name, this.color, this.megapixel);
-
-  void display() {
-    print("Model Name: $name");
-    print("Camera color: $color");
-    print("Lens Size: $megapixel");
-    print("-------------------");
+  // Default constructor
+  Stuednt({String? name = "John", int? age = 24}) {
+    this.name = name;
+    this.age = age;
   }
 }
 
 void main() {
-  Camera cannon = Camera("Cannon 45s", "Black", 45.5);
-  Camera nikkon = Camera("Nikkon 43f", "Blue", 46);
+  Stuednt student = Stuednt();
 
-  cannon.display();
-  nikkon.display();
+  print("Name:${student.name}");
+  print("Age:${student.age}");
 }
