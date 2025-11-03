@@ -1,22 +1,27 @@
-// Creating class in Dart
+// Declaring an Object in Dart
 
-class Animal {
-  String? name;
-  int? numOfLegs;
-  int? lifeSpan;
+class Bicycle {
+  String? color;
+  int? size;
+  int? currentSpeed;
+
+  void changeGear(int newValue) {
+    currentSpeed = newValue;
+  }
 
   void display() {
-    print("Animal name: $name");
-    print("Number of legs: $numOfLegs");
-    print("Life span: $lifeSpan");
+    print("Bicycle color: $color");
+    print("Size: $size");
+    print("Current Speed: $currentSpeed");
   }
 }
 
 void main() {
-  Animal animal = Animal();
-  animal.name = "Dogy";
-  animal.numOfLegs = 4;
-  animal.lifeSpan = 20;
+  Bicycle newCycle = Bicycle();
 
-  animal.display();
+  newCycle.color = "Sky Blue";
+  newCycle.size = 32;
+  newCycle.currentSpeed = 0;
+  newCycle.changeGear(5);
+  newCycle.display();
 }
