@@ -1,27 +1,25 @@
-// Declaring an Object in Dart
+// Usign Constructor in Dart
 
-class Bicycle {
+class Camera {
+  String? name;
   String? color;
-  int? size;
-  int? currentSpeed;
+  double? megapixel;
 
-  void changeGear(int newValue) {
-    currentSpeed = newValue;
-  }
+  // Constructor
+  Camera(this.name, this.color, this.megapixel);
 
   void display() {
-    print("Bicycle color: $color");
-    print("Size: $size");
-    print("Current Speed: $currentSpeed");
+    print("Model Name: $name");
+    print("Camera color: $color");
+    print("Lens Size: $megapixel");
+    print("-------------------");
   }
 }
 
 void main() {
-  Bicycle newCycle = Bicycle();
+  Camera cannon = Camera("Cannon 45s", "Black", 45.5);
+  Camera nikkon = Camera("Nikkon 43f", "Blue", 46);
 
-  newCycle.color = "Sky Blue";
-  newCycle.size = 32;
-  newCycle.currentSpeed = 0;
-  newCycle.changeGear(5);
-  newCycle.display();
+  cannon.display();
+  nikkon.display();
 }
