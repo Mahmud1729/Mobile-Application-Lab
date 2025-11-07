@@ -1,43 +1,23 @@
 // Usign Constructor in Dart
 
-class University {
+class Person {
   String? name;
-  String? location;
-  String? budget;
-  int? yearOfStablishment;
-
-  University.nameAndYear(this.name, this.yearOfStablishment) {
-    this.budget = "0cr";
-    this.location = "Bangladesh";
+  int? age;
+  // Default constructor
+  Person() {
+    this.name = "Your Name";
+    this.age = 24;
   }
-
-  University(
-      String name, String location, String budget, int yearOfStablishment) {
-    this.name = name;
-    this.location = location;
-    this.budget = budget;
-    this.yearOfStablishment = yearOfStablishment;
-  }
-
-  void details() {
-    print("Name: $name");
-    print("Location: $location");
-    print("Budget: $budget");
-    print("Year of Stablishment: $yearOfStablishment");
-  }
-}
-
-class EngineeringUni extends University {
-  String? acredation;
-
-  EngineeringUni(this.acredation) : super.nameAndYear('', 0);
-
-  void details() {
-    print("Acredation status ${this.acredation}");
+  // Named constructor
+  Person.newConstructor() {
+    name = "Unknown";
+    age = 0;
+    print(
+        "An instance of the person class is created using a named constructor");
   }
 }
 
 void main() {
-  var enggUni = EngineeringUni("BETEE");
-  enggUni.details();
+  Person defaultPerson = Person();
+  Person unknownPerson = new Person.newConstructor();
 }
