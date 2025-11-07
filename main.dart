@@ -1,19 +1,43 @@
 // Usign Constructor in Dart
 
-class Stuednt {
+class University {
   String? name;
-  int? age;
+  String? location;
+  String? budget;
+  int? yearOfStablishment;
 
-  // Default constructor
-  Stuednt({String? name = "John", int? age = 24}) {
+  University.nameAndYear(this.name, this.yearOfStablishment) {
+    this.budget = "0cr";
+    this.location = "Bangladesh";
+  }
+
+  University(
+      String name, String location, String budget, int yearOfStablishment) {
     this.name = name;
-    this.age = age;
+    this.location = location;
+    this.budget = budget;
+    this.yearOfStablishment = yearOfStablishment;
+  }
+
+  void details() {
+    print("Name: $name");
+    print("Location: $location");
+    print("Budget: $budget");
+    print("Year of Stablishment: $yearOfStablishment");
+  }
+}
+
+class EngineeringUni extends University {
+  String? acredation;
+
+  EngineeringUni(this.acredation) : super.nameAndYear('', 0);
+
+  void details() {
+    print("Acredation status ${this.acredation}");
   }
 }
 
 void main() {
-  Stuednt student = Stuednt();
-
-  print("Name:${student.name}");
-  print("Age:${student.age}");
+  var enggUni = EngineeringUni("BETEE");
+  enggUni.details();
 }
